@@ -1,18 +1,16 @@
 import { useCookies } from 'react-cookie'
 import { useNavigate } from 'react-router-dom'
-import { getUsers } from '../api/endpoints/users'
+import { useEffect } from 'react'
 
 export const Base = ({ children }) => {
   const navigate = useNavigate()
-  const [cookies, setCookie] = useCookies(['Auth'])
+  const [cookies] = useCookies(['authToken'])
 
-  const data = getUsers()
-
-  console.log('data_getUsers__ ', data)
-
-  if (!cookies?.Auth) {
-    navigate('/signin')
-  }
+  useEffect(() => {
+    if (!cookies?.authToken) {
+      navigate('/signin')
+    }
+  }, [cookies])
 
   return (
     <div>
