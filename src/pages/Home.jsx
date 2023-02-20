@@ -1,7 +1,11 @@
+import { Base } from '../layouts'
+
 export const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <Base>
+      <div>
+        Home
+      </div>
+    </Base>
   )
 }
