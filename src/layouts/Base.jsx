@@ -13,8 +13,8 @@ export const Base = ({ children }) => {
   }, [cookies])
 
   return (
-    <div>
+    <>
       {children}
-    </div>
+    </>
   )
 }

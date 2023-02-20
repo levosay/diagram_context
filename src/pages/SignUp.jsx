@@ -48,7 +48,7 @@ export const SignUp = () => {
         <Form className="flex flex-col gap-1">
           <ErrorMessage
             name="username"
-            render={msg => <span className="text-red-500">{msg}</span>}
+            render={msg => <span className="text-sm text-red-500">{msg}</span>}
           />
           <Field
             name="username"
@@ -57,7 +57,7 @@ export const SignUp = () => {
           />
           <ErrorMessage
             name="password"
-            render={msg => <span className="text-red-500">{msg}</span>}
+            render={msg => <span className="text-sm text-red-500">{msg}</span>}
           />
           <Field
             name="password"
@@ -66,7 +66,7 @@ export const SignUp = () => {
           />
           <ErrorMessage
             name="passwordRepeat"
-            render={msg => <span className="text-red-500">{msg}</span>}
+            render={msg => <span className="text-sm text-red-500">{msg}</span>}
           />
           <Field
             name="passwordRepeat"
