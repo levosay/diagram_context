@@ -123,14 +123,6 @@ const dataset4 = {
   ]
 }
 
-const options4 = {
-  scales: {
-    y: {
-      beginAtZero: true
-    }
-  }
-}
-
 export const Home = () => {
   return (
     <Base>
@@ -147,7 +139,7 @@ export const Home = () => {
           <Radar data={dataset3} />
         </div>
         <div className="w-1/2">
-          <Scatter data={dataset4} options={options4} />
+          <Scatter data={dataset4} />
         </div>
       </div>
     </Base>
