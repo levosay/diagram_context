@@ -28,7 +28,7 @@ export const SignIn = () => {
   }
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="max-w-sm mx-auto mt-20">
       <h1 className="mx-auto max-w-max mb-4 text-3xl">Авторизация</h1>
       {mesReq.error && <p className="mt-2 text-red-500">{mesReq.error}</p>}
       <Formik

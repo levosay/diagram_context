@@ -10,7 +10,7 @@ const initMesReq = {
 
 export const useAuthUser = () => {
   const [mesReq, setMesReq] = useState(initMesReq)
-  const [_, setCookie] = useCookies(['authToken'])
+  const [_, setCookie, removeCookie] = useCookies(['authToken'])
   const navigate = useNavigate()
 
   const signinToCookies = (body) => {
@@ -38,9 +38,14 @@ export const useAuthUser = () => {
       })
   }
 
+  const logOut = () => {
+    removeCookie('authToken', { path: '/' })
+  }
+
   return {
     signinToCookies,
     signupToRoute,
+    logOut,
     mesReq
   }
 }
