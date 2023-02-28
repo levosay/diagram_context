@@ -17,7 +17,7 @@ export const useAuthUser = () => {
     postSignin(body)
       .then(data => {
         if (data) {
-          setCookie('authToken', data)
+          setCookie('authToken', data.token)
           setMesReq(mesReq)
           navigate('/')
         }
