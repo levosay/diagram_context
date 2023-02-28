@@ -23,6 +23,7 @@ import {
   options2,
   tabs
 } from '@/public'
+import clsx from 'clsx'
 
 ChartJS.register(
   CategoryScale,
@@ -35,6 +36,7 @@ ChartJS.register(
   Tooltip,
   Legend
 )
+const classNameDefaultSpan = 'text-amber-700 cursor-pointer hover:text-amber-900'
 
 export const Home = () => {
   const { state, dispatch } = useContext(ContextApp)
@@ -48,11 +50,11 @@ export const Home = () => {
 
   const tabsList = useMemo(() => (
     tabs.map(({ id, title }) => {
-      const active = state.tab === id ? 'border-b-2' : ''
-
       return (
         <span
-          className={`text-amber-700 cursor-pointer hover:text-amber-900 ${active}`}
+          className={clsx(classNameDefaultSpan, {
+            'border-b-2': state.tab === id
+          })}
           onClick={() => toTab(id)}
         >
             {title}
