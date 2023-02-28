@@ -7,5 +7,5 @@ export const getUsers = async (id = '') => {
 }
 
 getUsers().then(data => {
-  console.log('asdasdasdas______ ', data)
+  console.log('getUsers______ ', data)
 })
